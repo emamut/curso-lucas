@@ -10,10 +10,10 @@
   <body>
     <div class="container" id="app">
       <div class="row mt-4">
-        <div class="col-12 mb-4" v-for="question in questionsArray">
-          <h1>{{ question.text }}</h1>
+        <div class="col-12 mb-4">
+          <h1>{{ questionsArray[activeQuestion].text }}</h1>
 
-          <button class="btn btn-warning mr-3" v-for="answer in question.answers">{{ answer }}</button>
+          <button class="btn btn-warning mr-3" @click="getSelectedAnswer(answer)" v-for="answer in questionsArray[activeQuestion].answers">{{ answer }}</button>
         </div>
       </div>
     </div>
