@@ -1,0 +1,10 @@
+[
+  {
+    "text": "¿Cómo es tu papá?",
+    "answers": ["Simpatico", "Mal geniado", "Loco", "Ausente"]
+  },
+  {
+    "text": "Qué le gusta hacer a tu papá?",
+    "answers": ["Nada", "Ver TV", "Chatear", "Viajar"]
+  }
+]
