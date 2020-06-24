@@ -9,11 +9,16 @@
   </head>
   <body>
     <div class="container" id="app">
-      <div class="row mt-4">
+      <div class="row mt-4" v-bind:class="checkDisplay(0)">
         <div class="col-12 mb-4">
           <h1>{{ questionsArray[activeQuestion].text }}</h1>
 
           <button class="btn btn-warning mr-3" @click="getSelectedAnswer(answer)" v-for="answer in questionsArray[activeQuestion].answers">{{ answer }}</button>
+        </div>
+      </div>
+      <div class="row mt-4" v-bind:class="checkDisplay(1)">
+        <div class="col">
+          <h1 class="text-danger">¡Hola tu padre es <strong>{{ selectAnswers[0] }}</strong> y le gusta <strong>{{ selectAnswers[1] }}</strong>!</h1>
         </div>
       </div>
     </div>

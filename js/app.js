@@ -3,7 +3,8 @@ var app = new Vue({
   data: {
     questionsArray: [{}],
     activeQuestion: 0,
-    selectAnswers: []
+    selectAnswers: [],
+    activeDisplay: 0
   },
   mounted: function () {
     var self = this
@@ -20,7 +21,13 @@ var app = new Vue({
       if(this.activeQuestion < (this.questionsArray.length - 1))
         this.activeQuestion++
       else
-        alert('es el final')
+        this.activeDisplay++
+    },
+    checkDisplay: function (id) {
+      if (id == this.activeDisplay)
+        return 'd-block'
+      else
+        return 'd-none'
     }
   }
 })
